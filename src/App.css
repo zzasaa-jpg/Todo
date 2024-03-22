@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+* {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li {
+  color: rgb(0, 0, 0);
+  list-style: none;
+  font-size: 20px;
+  width: 95%;
+  overflow: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li:hover {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  padding-top: 10px;
+}
+
+.com {
+  text-decoration: line-through;
+}
+
+.deletbtn {
+  width: 40px;
+  font-size: 22px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.deletbtn:hover {
+  cursor: pointer;
+}
+
+.todo-container {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.todo-container:hover {
+  cursor: pointer;
+}
+
+.linebtn {
+  width: 100px;
+  padding: 0px 1px;
+  border-radius: 4px;
+  font-size: 17px;
+  border: 1px solid black;
+}
+
+ion-icon {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+ion-icon:hover {
+  cursor: pointer;
+}
+
+.linebtn:hover {
+  cursor: pointer;
+  background: #dbdbdb;
+}
+
+#title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px;
+}
+
+#input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+#form {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+#Add {
+  width: 50px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#Add:hover {
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.alltodoDelet{
+  position: fixed;
+  bottom: 20px;
+  right: 2px;
+  width: 110px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 767px) {
+  ul li {
+    font-size: 16px;
+    width: auto;
+    overflow: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  ul {
+    padding-top: 0px;
+  }
+
+  .deletbtn {
+    width: 30px;
+    font-size: 20px;
+  }
+
+  .todo-container {
+    width: auto;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    gap: 1px;
+  }
+
+
+  .linebtn {
+    width: 80px;
+    padding: 1px 0px;
+    font-size: 15px;
+  }
+
+  #input {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  #form {
+    margin: 0;
+    width: auto;
+    gap: 5px;
+
+  }
+
+  #Add {
+    width: 35px;
+  }
+
+  ion-icon {
+    font-size: 25px;
+  }
+
+  .btns {
+    padding: 5px 1px;
+  }
+
+  .alltodoDelet{
+    bottom: 30px;
+    right: 10px;
+    padding: 5px 0; 
   }
 }
