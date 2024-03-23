@@ -93,9 +93,7 @@ ul {
   border: 1px solid black;
 }
 
-.dark .linebtn {
-  border: 1px solid white;
-}
+
 
 ion-icon {
   font-size: 30px;
@@ -110,7 +108,7 @@ ion-icon:hover {
 
 .linebtn:hover {
   cursor: pointer;
-  background: #dbdbdb;
+  font-size: 18px;
 }
 
 #title {
@@ -197,17 +195,17 @@ ion-icon:hover {
     padding-top: 0px;
   }
 
+  .nav{
+    padding: 4px;
+  }
+
   #title {
-    font-size: 18px;
+    font-size: 20px;
+    width: 160px;
   }
 
   #no-todo-info {
     font-size: 24px;
-  }
-
-  .deletbtn {
-    width: 30px;
-    font-size: 20px;
   }
 
   .todo-container {
@@ -225,20 +223,42 @@ ion-icon:hover {
     font-size: 15px;
   }
 
+  .linebtn:hover{
+    font-style: italic;
+    font-size: 15px;
+  }
+
   #input {
     font-size: 16px;
     padding: 5px;
-    width: 80%;
+    width: 60%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+    border-right: none;
+  }
+
+  .dark #input{
+    border-right: none;
   }
 
   #form {
     margin: 0;
     width: auto;
-    gap: 5px;
+    gap: 0px;
   }
 
   #Add {
-    width: 35px;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 1.84px;
+  }
+
+  .dark #Add {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
   }
 
   ion-icon {
