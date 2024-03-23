@@ -6,17 +6,18 @@ function App() {
   let [dark, setDark] = useState(false)
 
   let savetodolidt = (event) => {
+    event.preventDefault();
     let todoname = event.target.todo.value;
 
     if (!todolist.includes(todoname)) {
       let finaltodolist = [...todolist, todoname];
       setTodolist(finaltodolist)
       localStorage.setItem("todo", JSON.stringify(finaltodolist))
+      event.target.reset()
     } else {
       alert("todo exist")
     }
 
-    event.preventDefault();
   }
 
   let list = todolist.map((value, index) => {
