@@ -40,7 +40,19 @@ function App() {
 
   let darkMode = () => {
     setDark(!dark)
+    if (!dark) {
+      localStorage.setItem("darkmode", dark);
+    }else{
+      localStorage.removeItem("darkmode");
+    }
   }
+
+  useEffect(()=>{
+    let darkmode = localStorage.getItem("darkmode");
+    if (darkmode){
+      setDark(true)
+    }
+  },[])
 
   return (
     <div className={dark ? "dark" : "lop"}>
@@ -64,7 +76,7 @@ function App() {
         todolist.length === 0 && <h1 id='no-todo-info' >No Todos, Add Todo!!!</h1>
       }
       {
-        todolist.length > 0 && <button className='alltodoDelet' onClick={handleclick}>All Tudos<ion-icon name="trash-outline"></ion-icon></button>
+        todolist.length > 0 && <button className='alltodoDelet' onClick={handleclick}>All Todo<ion-icon name="trash-outline"></ion-icon></button>
       }
     </div>
   );
