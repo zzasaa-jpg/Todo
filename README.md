@@ -2,7 +2,7 @@
 
 ## Details of stack, third party, programming language
 - FrontEnd
-- 
+- No third party
 - Java script
 
 ## Website main functionality
